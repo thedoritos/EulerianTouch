@@ -17,6 +17,10 @@
 		678E130C1795153C005B6D19 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 678E130B1795153C005B6D19 /* Default.png */; };
 		678E130E17951540005B6D19 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 678E130D17951540005B6D19 /* Default@2x.png */; };
 		678E131017951549005B6D19 /* Default-568h@2x~iphone.png in Resources */ = {isa = PBXBuildFile; fileRef = 678E130F17951549005B6D19 /* Default-568h@2x~iphone.png */; };
+		7633AE521829314D00B809C8 /* EUNode.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7633AE501829314D00B809C8 /* EUNode.cpp */; };
+		7633AE59182931EE00B809C8 /* EUNodeModel.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7633AE57182931EE00B809C8 /* EUNodeModel.cpp */; };
+		7633AE5E182933BD00B809C8 /* EUGraphView.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7633AE5C182933BD00B809C8 /* EUGraphView.cpp */; };
+		76E143511829377400377C0A /* EUGraphController.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 76E1434F1829377400377C0A /* EUGraphController.cpp */; };
 		BB16EBD20F2B2A9500518274 /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BB16EBD10F2B2A9500518274 /* OpenGLES.framework */; };
 		BB16EBD90F2B2AB500518274 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BB16EBD80F2B2AB500518274 /* QuartzCore.framework */; };
 		BBE5EAB80F49AD8400F28951 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BBE5EAB70F49AD8400F28951 /* AudioToolbox.framework */; };
@@ -62,6 +66,14 @@
 		678E130B1795153C005B6D19 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Default.png; path = bin/data/Default.png; sourceTree = "<group>"; };
 		678E130D17951540005B6D19 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default@2x.png"; path = "bin/data/Default@2x.png"; sourceTree = "<group>"; };
 		678E130F17951549005B6D19 /* Default-568h@2x~iphone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default-568h@2x~iphone.png"; path = "bin/data/Default-568h@2x~iphone.png"; sourceTree = "<group>"; };
+		7633AE501829314D00B809C8 /* EUNode.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = EUNode.cpp; path = views/graph/EUNode.cpp; sourceTree = "<group>"; };
+		7633AE511829314D00B809C8 /* EUNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EUNode.h; path = views/graph/EUNode.h; sourceTree = "<group>"; };
+		7633AE57182931EE00B809C8 /* EUNodeModel.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = EUNodeModel.cpp; path = models/graph/EUNodeModel.cpp; sourceTree = "<group>"; };
+		7633AE58182931EE00B809C8 /* EUNodeModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EUNodeModel.h; path = models/graph/EUNodeModel.h; sourceTree = "<group>"; };
+		7633AE5C182933BD00B809C8 /* EUGraphView.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = EUGraphView.cpp; path = views/graph/EUGraphView.cpp; sourceTree = "<group>"; };
+		7633AE5D182933BD00B809C8 /* EUGraphView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EUGraphView.h; path = views/graph/EUGraphView.h; sourceTree = "<group>"; };
+		76E1434F1829377400377C0A /* EUGraphController.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = EUGraphController.cpp; path = controllers/graph/EUGraphController.cpp; sourceTree = "<group>"; };
+		76E143501829377400377C0A /* EUGraphController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EUGraphController.h; path = controllers/graph/EUGraphController.h; sourceTree = "<group>"; };
 		BB16EBD10F2B2A9500518274 /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
 		BB16EBD80F2B2AB500518274 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		BB24DDC910DA781C00E9C588 /* ofxiOS-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "ofxiOS-Info.plist"; sourceTree = "<group>"; };
@@ -149,6 +161,59 @@
 			name = "core frameworks";
 			sourceTree = "<group>";
 		};
+		7633AE531829315100B809C8 /* views */ = {
+			isa = PBXGroup;
+			children = (
+				7633AE541829315500B809C8 /* graph */,
+			);
+			name = views;
+			sourceTree = "<group>";
+		};
+		7633AE541829315500B809C8 /* graph */ = {
+			isa = PBXGroup;
+			children = (
+				7633AE501829314D00B809C8 /* EUNode.cpp */,
+				7633AE511829314D00B809C8 /* EUNode.h */,
+				7633AE5C182933BD00B809C8 /* EUGraphView.cpp */,
+				7633AE5D182933BD00B809C8 /* EUGraphView.h */,
+			);
+			name = graph;
+			sourceTree = "<group>";
+		};
+		7633AE55182931C900B809C8 /* models */ = {
+			isa = PBXGroup;
+			children = (
+				7633AE56182931D100B809C8 /* graph */,
+			);
+			name = models;
+			sourceTree = "<group>";
+		};
+		7633AE56182931D100B809C8 /* graph */ = {
+			isa = PBXGroup;
+			children = (
+				7633AE57182931EE00B809C8 /* EUNodeModel.cpp */,
+				7633AE58182931EE00B809C8 /* EUNodeModel.h */,
+			);
+			name = graph;
+			sourceTree = "<group>";
+		};
+		7633AE5A1829334600B809C8 /* controllers */ = {
+			isa = PBXGroup;
+			children = (
+				7633AE5B1829337700B809C8 /* graph */,
+			);
+			name = controllers;
+			sourceTree = "<group>";
+		};
+		7633AE5B1829337700B809C8 /* graph */ = {
+			isa = PBXGroup;
+			children = (
+				76E1434F1829377400377C0A /* EUGraphController.cpp */,
+				76E143501829377400377C0A /* EUGraphController.h */,
+			);
+			name = graph;
+			sourceTree = "<group>";
+		};
 		BB16E9930F2B1E5900518274 /* libs */ = {
 			isa = PBXGroup;
 			children = (
@@ -195,6 +260,9 @@
 		E4D8936A11527B74007E1F53 /* src */ = {
 			isa = PBXGroup;
 			children = (
+				7633AE5A1829334600B809C8 /* controllers */,
+				7633AE55182931C900B809C8 /* models */,
+				7633AE531829315100B809C8 /* views */,
 				E4D8936B11527B74007E1F53 /* main.mm */,
 				E4D8936D11527B74007E1F53 /* testApp.mm */,
 				E4D8936C11527B74007E1F53 /* testApp.h */,
@@ -305,6 +373,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				76E143511829377400377C0A /* EUGraphController.cpp in Sources */,
+				7633AE5E182933BD00B809C8 /* EUGraphView.cpp in Sources */,
+				7633AE521829314D00B809C8 /* EUNode.cpp in Sources */,
+				7633AE59182931EE00B809C8 /* EUNodeModel.cpp in Sources */,
 				E4D8936E11527B74007E1F53 /* main.mm in Sources */,
 				E4D8936F11527B74007E1F53 /* testApp.mm in Sources */,
 			);

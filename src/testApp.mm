@@ -1,18 +1,25 @@
 #include "testApp.h"
 
 //--------------------------------------------------------------
-void testApp::setup(){	
-
+void testApp::setup(){
+    
+    ofRectangle winBounds = ofGetWindowRect();
+    
+    _graphView = new EUGraphView(winBounds);
 }
 
 //--------------------------------------------------------------
 void testApp::update(){
-
+    
+    // Using const dt to make is simple.
+    float dt = 1.0f / 45.0f;
+    
+    _graphView->update(dt);
 }
 
 //--------------------------------------------------------------
 void testApp::draw(){
-	
+	_graphView->draw();
 }
 
 //--------------------------------------------------------------
