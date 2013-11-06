@@ -67,12 +67,28 @@ void EUGraphController::onScreenTouch(const EUGraphView &view, const ofTouchEven
     }
 }
 
-void EUGraphController::onGraphTouch(const EUGraphView &view, int graphIdx)
+void EUGraphController::onGraphTouch(const EUGraphView &view, const ofTouchEventArgs &touch, int graphIdx)
 {
     
 }
 
-void EUGraphController::onNodeTouch(const EUGraphView &view, int graphIdx, int nodeIdx)
+void EUGraphController::onNodeTouch(const EUGraphView &view, const ofTouchEventArgs &touch, int graphIdx, int nodeIdx)
 {
-    
+    switch (touch.type) {
+        case ofTouchEventArgs::down:
+        {
+            // Add node or complete graph.
+            bool completed = _model->addNodeOn(graphIdx, nodeIdx);
+            if (completed) {
+                _model->endGraph();
+            }
+            
+            // Update view.
+            _view->update(*_model);
+            
+            break;
+        }
+        default:
+            break;
+    }
 }

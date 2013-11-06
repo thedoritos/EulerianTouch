@@ -15,6 +15,7 @@
 
 #include "EUGraph.h"
 #include "EUNode.h"
+#include "EUColor.h"
 
 class EUGraphViewDelegate;
 
@@ -37,10 +38,13 @@ public:
     
 private:
     
-    ofColor _bgColor;
+    EUColor _color;
     ofRectangle _bounds;
     
     vector<EUGraph *> _graphArray;
+    
+    int _idxGraphTouched;
+    int _idxNodeTouched;
     
     EUGraphViewDelegate *_delegate;
 };
@@ -48,8 +52,8 @@ private:
 class EUGraphViewDelegate {
 public:
     virtual void onScreenTouch(const EUGraphView &view, const ofTouchEventArgs &touch) = 0;
-    virtual void onGraphTouch(const EUGraphView &view, int graphIdx) = 0;
-    virtual void onNodeTouch(const EUGraphView &view, int graphIdx, int nodeIdx) = 0;
+    virtual void onGraphTouch(const EUGraphView &view, const ofTouchEventArgs &touch, int graphIdx) = 0;
+    virtual void onNodeTouch(const EUGraphView &view, const ofTouchEventArgs &touch, int graphIdx, int nodeIdx) = 0;
 };
 
 #endif /* defined(__EulerianTouch__EUGraphView__) */

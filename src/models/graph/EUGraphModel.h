@@ -35,13 +35,15 @@ public:
     
     void addNode(const ofPoint &pos);
     void addNode(const ofPoint &pos, int idx);
+    
+    bool addNodeOn(int graphIdx, int nodeIdx);
+    
     void moveNode(const ofPoint &dif);
     void moveGraph(const ofPoint &dif);
     void copyNode();
     void copyGraph();
     void removeNode();
     void removeGraph();
-    
     
 private:
     

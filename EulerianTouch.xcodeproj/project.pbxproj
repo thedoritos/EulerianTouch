@@ -17,9 +17,13 @@
 		678E130C1795153C005B6D19 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 678E130B1795153C005B6D19 /* Default.png */; };
 		678E130E17951540005B6D19 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 678E130D17951540005B6D19 /* Default@2x.png */; };
 		678E131017951549005B6D19 /* Default-568h@2x~iphone.png in Resources */ = {isa = PBXBuildFile; fileRef = 678E130F17951549005B6D19 /* Default-568h@2x~iphone.png */; };
+		7609B901182A21AB00FD4289 /* EUColor.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7609B8FF182A21AB00FD4289 /* EUColor.cpp */; };
+		761DE76A182A3B64009E0068 /* EUSegment.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 761DE768182A3B64009E0068 /* EUSegment.cpp */; };
 		762F67681829B77A00C68E06 /* EUGraphEntity.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 762F67661829B77A00C68E06 /* EUGraphEntity.cpp */; };
 		762F676E1829CF7D00C68E06 /* EUGraph.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 762F676C1829CF7D00C68E06 /* EUGraph.cpp */; };
 		762F67711829EA0A00C68E06 /* EUGraphModel.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 762F676F1829EA0A00C68E06 /* EUGraphModel.cpp */; };
+		762F6778182A1B6E00C68E06 /* EUColorDirector.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 762F6776182A1B6E00C68E06 /* EUColorDirector.cpp */; };
+		762F677B182A1B8E00C68E06 /* EUDirector.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 762F6779182A1B8E00C68E06 /* EUDirector.cpp */; };
 		7633AE521829314D00B809C8 /* EUNode.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7633AE501829314D00B809C8 /* EUNode.cpp */; };
 		7633AE59182931EE00B809C8 /* EUNodeEntity.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7633AE57182931EE00B809C8 /* EUNodeEntity.cpp */; };
 		7633AE5E182933BD00B809C8 /* EUGraphView.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7633AE5C182933BD00B809C8 /* EUGraphView.cpp */; };
@@ -69,6 +73,10 @@
 		678E130B1795153C005B6D19 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Default.png; path = bin/data/Default.png; sourceTree = "<group>"; };
 		678E130D17951540005B6D19 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default@2x.png"; path = "bin/data/Default@2x.png"; sourceTree = "<group>"; };
 		678E130F17951549005B6D19 /* Default-568h@2x~iphone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default-568h@2x~iphone.png"; path = "bin/data/Default-568h@2x~iphone.png"; sourceTree = "<group>"; };
+		7609B8FF182A21AB00FD4289 /* EUColor.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = EUColor.cpp; path = utils/color/EUColor.cpp; sourceTree = "<group>"; };
+		7609B900182A21AB00FD4289 /* EUColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EUColor.h; path = utils/color/EUColor.h; sourceTree = "<group>"; };
+		761DE768182A3B64009E0068 /* EUSegment.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = EUSegment.cpp; path = views/graph/EUSegment.cpp; sourceTree = "<group>"; };
+		761DE769182A3B64009E0068 /* EUSegment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EUSegment.h; path = views/graph/EUSegment.h; sourceTree = "<group>"; };
 		762F67661829B77A00C68E06 /* EUGraphEntity.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = EUGraphEntity.cpp; path = models/graph/EUGraphEntity.cpp; sourceTree = "<group>"; };
 		762F67671829B77A00C68E06 /* EUGraphEntity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EUGraphEntity.h; path = models/graph/EUGraphEntity.h; sourceTree = "<group>"; };
 		762F676A1829B82000C68E06 /* EUMacros.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = EUMacros.h; path = utils/EUMacros.h; sourceTree = "<group>"; };
@@ -76,6 +84,10 @@
 		762F676D1829CF7D00C68E06 /* EUGraph.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EUGraph.h; path = views/graph/EUGraph.h; sourceTree = "<group>"; };
 		762F676F1829EA0A00C68E06 /* EUGraphModel.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = EUGraphModel.cpp; path = models/graph/EUGraphModel.cpp; sourceTree = "<group>"; };
 		762F67701829EA0A00C68E06 /* EUGraphModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EUGraphModel.h; path = models/graph/EUGraphModel.h; sourceTree = "<group>"; };
+		762F6776182A1B6E00C68E06 /* EUColorDirector.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = EUColorDirector.cpp; path = models/director/EUColorDirector.cpp; sourceTree = "<group>"; };
+		762F6777182A1B6E00C68E06 /* EUColorDirector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EUColorDirector.h; path = models/director/EUColorDirector.h; sourceTree = "<group>"; };
+		762F6779182A1B8E00C68E06 /* EUDirector.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = EUDirector.cpp; path = models/director/EUDirector.cpp; sourceTree = "<group>"; };
+		762F677A182A1B8E00C68E06 /* EUDirector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EUDirector.h; path = models/director/EUDirector.h; sourceTree = "<group>"; };
 		7633AE501829314D00B809C8 /* EUNode.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = EUNode.cpp; path = views/graph/EUNode.cpp; sourceTree = "<group>"; };
 		7633AE511829314D00B809C8 /* EUNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EUNode.h; path = views/graph/EUNode.h; sourceTree = "<group>"; };
 		7633AE57182931EE00B809C8 /* EUNodeEntity.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = EUNodeEntity.cpp; path = models/graph/EUNodeEntity.cpp; sourceTree = "<group>"; };
@@ -171,12 +183,33 @@
 			name = "core frameworks";
 			sourceTree = "<group>";
 		};
+		7609B8FE182A219400FD4289 /* color */ = {
+			isa = PBXGroup;
+			children = (
+				7609B8FF182A21AB00FD4289 /* EUColor.cpp */,
+				7609B900182A21AB00FD4289 /* EUColor.h */,
+			);
+			name = color;
+			sourceTree = "<group>";
+		};
 		762F67691829B81200C68E06 /* utils */ = {
 			isa = PBXGroup;
 			children = (
+				7609B8FE182A219400FD4289 /* color */,
 				762F676A1829B82000C68E06 /* EUMacros.h */,
 			);
 			name = utils;
+			sourceTree = "<group>";
+		};
+		762F6772182A1AFA00C68E06 /* director */ = {
+			isa = PBXGroup;
+			children = (
+				762F6779182A1B8E00C68E06 /* EUDirector.cpp */,
+				762F677A182A1B8E00C68E06 /* EUDirector.h */,
+				762F6776182A1B6E00C68E06 /* EUColorDirector.cpp */,
+				762F6777182A1B6E00C68E06 /* EUColorDirector.h */,
+			);
+			name = director;
 			sourceTree = "<group>";
 		};
 		7633AE531829315100B809C8 /* views */ = {
@@ -196,6 +229,8 @@
 				7633AE5D182933BD00B809C8 /* EUGraphView.h */,
 				762F676C1829CF7D00C68E06 /* EUGraph.cpp */,
 				762F676D1829CF7D00C68E06 /* EUGraph.h */,
+				761DE768182A3B64009E0068 /* EUSegment.cpp */,
+				761DE769182A3B64009E0068 /* EUSegment.h */,
 			);
 			name = graph;
 			sourceTree = "<group>";
@@ -203,6 +238,7 @@
 		7633AE55182931C900B809C8 /* models */ = {
 			isa = PBXGroup;
 			children = (
+				762F6772182A1AFA00C68E06 /* director */,
 				7633AE56182931D100B809C8 /* graph */,
 			);
 			name = models;
@@ -403,8 +439,12 @@
 				762F67681829B77A00C68E06 /* EUGraphEntity.cpp in Sources */,
 				7633AE5E182933BD00B809C8 /* EUGraphView.cpp in Sources */,
 				7633AE521829314D00B809C8 /* EUNode.cpp in Sources */,
+				762F6778182A1B6E00C68E06 /* EUColorDirector.cpp in Sources */,
+				761DE76A182A3B64009E0068 /* EUSegment.cpp in Sources */,
 				7633AE59182931EE00B809C8 /* EUNodeEntity.cpp in Sources */,
+				762F677B182A1B8E00C68E06 /* EUDirector.cpp in Sources */,
 				762F67711829EA0A00C68E06 /* EUGraphModel.cpp in Sources */,
+				7609B901182A21AB00FD4289 /* EUColor.cpp in Sources */,
 				E4D8936E11527B74007E1F53 /* main.mm in Sources */,
 				E4D8936F11527B74007E1F53 /* testApp.mm in Sources */,
 			);

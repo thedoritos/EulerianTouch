@@ -30,9 +30,13 @@ public:
     const int getNumNodes() const;
     const EUNodeEntity & getNode(int idx) const;
     
+    const bool isCompleted() const;
+    void setCompleted(bool completed);
+    
 private:
     
     vector<EUNodeEntity *> _nodeArray;
+    bool _isCompleted;
     
 };
 

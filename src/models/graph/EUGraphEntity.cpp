@@ -76,3 +76,13 @@ const EUNodeEntity & EUGraphEntity::getNode(int idx) const
 {
     return *_nodeArray[idx];
 }
+
+const bool EUGraphEntity::isCompleted() const
+{
+    return _isCompleted;
+}
+
+void EUGraphEntity::setCompleted(bool completed)
+{
+    _isCompleted = completed;
+}

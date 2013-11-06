@@ -103,6 +103,25 @@ void EUGraphModel::addNode(const ofPoint &pos, int idx)
     _graphArray[_editGraphIdx]->add(pos, idx);
 }
 
+bool EUGraphModel::addNodeOn(int graphIdx, int nodeIdx)
+{
+    // Check if this action will complete graph.
+    if (graphIdx == _editGraphIdx
+        && nodeIdx == 0
+        && _graphArray[_editGraphIdx]->getNumNodes() >= 3) {
+        
+        // Complete graph.
+        _graphArray[_editGraphIdx]->setCompleted(true);
+        return true;
+        
+    } else {
+        
+        // Add node.
+        addNode(_graphArray[graphIdx]->getNode(nodeIdx).getPosition());
+        return false;
+    }
+}
+
 void EUGraphModel::moveNode(const ofPoint &dif)
 {
     _graphArray[_editGraphIdx]->move(dif, _editNodeIdx);

@@ -11,10 +11,13 @@
 
 #include "ofMain.h"
 #include "EUNodeEntity.h"
+#include "EUColor.h"
 
 class EUNode {
     
 public:
+    
+    static const float TOUCH_THRESHOLD;
     
     EUNode();
     ~EUNode();
@@ -24,10 +27,18 @@ public:
     void update(float dt);
     void draw();
     
+    void setColor(const EUColor &color);
+    
+    const ofPoint & getPosition() const;
+    
+    bool contains(const ofPoint &pos) const;
+    
 private:
     
     ofPoint _pos;
     float _size;
+    
+    EUColor _color;
     
 };
 

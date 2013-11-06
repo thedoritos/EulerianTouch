@@ -28,8 +28,8 @@ public:
     
     // EUGraphViewDelegate
     virtual void onScreenTouch(const EUGraphView &view, const ofTouchEventArgs &touch);
-    virtual void onGraphTouch(const EUGraphView &view, int graphIdx);
-    virtual void onNodeTouch(const EUGraphView &view, int graphIdx, int nodeIdx);
+    virtual void onGraphTouch(const EUGraphView &view, const ofTouchEventArgs &touch, int graphIdx);
+    virtual void onNodeTouch(const EUGraphView &view, const ofTouchEventArgs &touch, int graphIdx, int nodeIdx);
 
 private:
     

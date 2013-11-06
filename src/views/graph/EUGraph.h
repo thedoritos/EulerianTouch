@@ -12,6 +12,9 @@
 #include "ofMain.h"
 #include "EUGraphEntity.h"
 #include "EUNode.h"
+#include "EUSegment.h"
+#include "EUDirector.h"
+#include "EUColor.h"
 
 class EUGraph {
     
@@ -25,9 +28,14 @@ public:
     void update(float dt);
     void draw();
     
+    const int indexOfNodeContains(const ofPoint &pos) const;
+    const int indexOfSegmentContains(const ofPoint &pos) const;
+    
 private:
     
+    EUColor _color;
     vector<EUNode *> _nodeArray;
+    vector<EUSegment *> _segmArray;
     
 };
 
