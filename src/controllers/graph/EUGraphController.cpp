@@ -77,6 +77,11 @@ void EUGraphController::onNodeTouch(const EUGraphView &view, const ofTouchEventA
     switch (touch.type) {
         case ofTouchEventArgs::down:
         {
+            // Create graph if needed.
+            if (! _model->isEditingGraph()) {
+                _model->beginGraph();
+            }
+            
             // Add node or complete graph.
             bool completed = _model->addNodeOn(graphIdx, nodeIdx);
             if (completed) {
