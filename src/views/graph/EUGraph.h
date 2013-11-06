@@ -20,7 +20,7 @@ public:
     EUGraph(const EUGraphEntity &graphModel);
     ~EUGraph();
     
-    void update(const EUGraphEntity &graphModel, const ofRectangle &viewBounds);
+    void update(const EUGraphEntity &graphEntity, const ofRectangle &viewBounds);
     
     void update(float dt);
     void draw();

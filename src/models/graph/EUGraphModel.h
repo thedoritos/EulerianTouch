@@ -24,15 +24,12 @@ public:
     const bool isEditingGraph() const;
     const bool isEditingNode() const;
     
-    // Creating graph.
     bool beginGraph();
     bool endGraph();
     
-    // Editing graph.
     bool beginEditGraph(int graphIdx);
     bool endEditGraph();
     
-    // Editing node.
     bool beginEditNode(int graphIdx, int nodeIdx);
     bool endEditNode();
     

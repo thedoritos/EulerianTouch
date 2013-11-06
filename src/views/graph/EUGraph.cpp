@@ -18,11 +18,11 @@ EUGraph::~EUGraph()
     
 }
 
-void EUGraph::update(const EUGraphEntity &graphModel, const ofRectangle &viewBounds)
+void EUGraph::update(const EUGraphEntity &graphEntity, const ofRectangle &viewBounds)
 {
     // Adjust the number of the nodes.
     // Create if we need more, or delete if we have too many.
-    int numNodesNeeded = graphModel.getNumNodes() - _nodeArray.size();
+    int numNodesNeeded = graphEntity.getNumNodes() - _nodeArray.size();
     
     if (numNodesNeeded > 0) {
         for (int i = 0; i < numNodesNeeded; i++) {
@@ -43,7 +43,7 @@ void EUGraph::update(const EUGraphEntity &graphModel, const ofRectangle &viewBou
     
     // Update nodes.
     for (int i = 0; i < _nodeArray.size(); i++) {
-        _nodeArray[i]->update(graphModel.getNode(i), viewBounds);
+        _nodeArray[i]->update(graphEntity.getNode(i), viewBounds);
     }
 }
 

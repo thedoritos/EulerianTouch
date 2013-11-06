@@ -19,7 +19,7 @@ public:
     EUNode();
     ~EUNode();
     
-    void update(const EUNodeEntity &nodeModel, const ofRectangle &viewBounds);
+    void update(const EUNodeEntity &nodeEntity, const ofRectangle &viewBounds);
     
     void update(float dt);
     void draw();

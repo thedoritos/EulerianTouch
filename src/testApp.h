@@ -4,7 +4,9 @@
 #include "ofxiOS.h"
 #include "ofxiOSExtras.h"
 
+#include "EUGraphModel.h"
 #include "EUGraphView.h"
+#include "EUGraphController.h"
 
 class testApp : public ofxiOSApp{
 	
@@ -27,7 +29,9 @@ public:
     
 private:
     
+    EUGraphModel *_graphModel;
     EUGraphView *_graphView;
+    EUGraphController *_graphController;
 
 };
 

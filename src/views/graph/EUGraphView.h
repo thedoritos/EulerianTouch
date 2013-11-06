@@ -11,6 +11,8 @@
 
 #include "ofMain.h"
 
+#include "EUGraphModel.h"
+
 #include "EUGraph.h"
 #include "EUNode.h"
 
@@ -23,10 +25,15 @@ public:
     EUGraphView(const ofRectangle &bounds);
     ~EUGraphView();
     
+    void update(const EUGraphModel &model);
     void update(float dt);
     void draw();
     
+    bool handleTouch(const ofTouchEventArgs &touch);
+    
     void setDelegate(EUGraphViewDelegate *delegate);
+    
+    const ofRectangle & getBounds() const;
     
 private:
     
@@ -40,7 +47,7 @@ private:
 
 class EUGraphViewDelegate {
 public:
-    virtual void onScreenTouch(const EUGraphView &view) = 0;
+    virtual void onScreenTouch(const EUGraphView &view, const ofTouchEventArgs &touch) = 0;
     virtual void onGraphTouch(const EUGraphView &view, int graphIdx) = 0;
     virtual void onNodeTouch(const EUGraphView &view, int graphIdx, int nodeIdx) = 0;
 };
