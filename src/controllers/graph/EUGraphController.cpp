@@ -7,3 +7,8 @@
 //
 
 #include "EUGraphController.h"
+
+bool onTouch(const ofTouchEventArgs &touch)
+{
+    return true;
+}

@@ -11,6 +11,11 @@
 
 #include "ofMain.h"
 
+#include "EUGraph.h"
+#include "EUNode.h"
+
+class EUGraphViewDelegate;
+
 class EUGraphView {
     
 public:
@@ -21,11 +26,23 @@ public:
     void update(float dt);
     void draw();
     
+    void setDelegate(EUGraphViewDelegate *delegate);
+    
 private:
     
     ofColor _bgColor;
     ofRectangle _bounds;
     
+    vector<EUGraph *> _graphArray;
+    
+    EUGraphViewDelegate *_delegate;
+};
+
+class EUGraphViewDelegate {
+public:
+    virtual void onScreenTouch(const EUGraphView &view) = 0;
+    virtual void onGraphTouch(const EUGraphView &view, int graphIdx) = 0;
+    virtual void onNodeTouch(const EUGraphView &view, int graphIdx, int nodeIdx) = 0;
 };
 
 #endif /* defined(__EulerianTouch__EUGraphView__) */
